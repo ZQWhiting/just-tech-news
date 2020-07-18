@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
-    "mysql": "mysql --login-path=root"
+    "mysql": "mysql --login-path=root just_tech_news_db"
   },
   "repository": {
     "type": "git",
