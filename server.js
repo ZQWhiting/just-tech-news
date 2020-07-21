@@ -8,8 +8,15 @@ const helpers = require('./utils/helpers')
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
+let secret
+if (process.env.JAWSDB_URL) {
+    secret = process.env.JAWSDB_URL
+} else {
+    secret = process.env.SESS_SECRET
+}
+
 const sess = {
-    secret: process.env.SESS_SECRET,
+    secret: secret,
     cookie: {},
     resave: false,
     saveUninitialized: true,
